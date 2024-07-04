@@ -1,6 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Helmet } from 'react-helmet-async'
 import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
 import * as z from 'zod'
 
 import { Button } from '@/components/ui/button'
@@ -23,9 +24,20 @@ export function SignIn() {
   })
 
   async function handleSignIn(data: SignInForm) {
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 2000))
 
-    console.log(data.email)
+      toast.success('Enviamos um link de autenticacao para seu email.', {
+        action: {
+          label: 'Reenviar',
+          onClick: () => {
+            handleSignIn(data)
+          },
+        },
+      })
+    } catch (error) {
+      toast.error('Credenciais invalidas')
+    }
   }
 
   return (
