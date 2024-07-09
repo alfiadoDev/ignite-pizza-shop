@@ -26,7 +26,7 @@ export function OrderStatus({ status }: OrderStatusProps) {
       {status === 'canceled' && (
         <span className="h-2 w-2 rounded-full bg-rose-500" />
       )}
-      {['proccessing', 'delivered'].includes(status) && (
+      {['processing', 'delivered'].includes(status) && (
         <span className="h-2 w-2 rounded-full bg-amber-500" />
       )}
       {status === 'delivered' && (
