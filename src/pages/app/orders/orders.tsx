@@ -47,17 +47,6 @@ export function Orders() {
     })
   }
 
-  function handleClearFilters() {
-    setSearchParams((prev) => {
-      prev.delete('orderId')
-      prev.delete('customerName')
-      prev.delete('status')
-      prev.set('page', '1')
-
-      return prev
-    })
-  }
-
   return (
     <>
       <Helmet title="Pedidos" />
