@@ -1,13 +1,13 @@
 import { api } from '@/lib/axios'
 
 interface GetDailyRevenueInPeriodQueryProps {
-  from?: Date
-  to?: Date
+  from?: Date;
+  to?: Date;
 }
 
 export type GetDailyRevenueInPeriodProps = {
-  date: string
-  receipt: number
+  date: string,
+  receipt: number,
 }[]
 
 export async function getDailyRevenueInPeriod({
