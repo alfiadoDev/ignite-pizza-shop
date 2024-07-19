@@ -39,7 +39,7 @@ export function Pagination({
             variant="outline"
           >
             <ChevronsLeft className="h-4 w-4" />
-            <span className="sr-only"> Primeira Pagina</span>
+            <span className="sr-only">Primeira Pagina</span>
           </Button>
           <Button
             disabled={pageIndex === 0}
@@ -47,7 +47,7 @@ export function Pagination({
             variant="outline"
           >
             <ChevronLeft className="h-4 w-4" />
-            <span className="sr-only"> Pagina Anterior</span>
+            <span className="sr-only">Pagina Anterior</span>
           </Button>
           <Button
             disabled={pages <= pageIndex + 1}

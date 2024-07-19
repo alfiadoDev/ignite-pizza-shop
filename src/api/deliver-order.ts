@@ -1,7 +1,7 @@
 import { api } from '@/lib/axios'
 
-interface DeliverOrderProps {
-  orderId: string
+export interface DeliverOrderProps {
+  orderId: string;
 }
 
 export async function deliverOrder({ orderId }: DeliverOrderProps) {

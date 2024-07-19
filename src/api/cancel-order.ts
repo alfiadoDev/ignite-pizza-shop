@@ -1,7 +1,7 @@
 import { api } from '@/lib/axios'
 
-interface CancelOrderProps {
-  orderId: string
+export interface CancelOrderProps {
+  orderId: string;
 }
 
 export async function cancelOrder({ orderId }: CancelOrderProps) {
