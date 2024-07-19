@@ -22,7 +22,7 @@ test('Update profile successfully', async ({ page }) => {
 
   // await page.waitForTimeout(2000)
 
-  expect(page.getByRole('button', { name: 'Rocket Pizza' })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Rocket Pizza' })).toBeVisible()
 })
 
 test('Update profile with wrong credentials', async ({ page }) => {
@@ -41,5 +41,5 @@ test('Update profile with wrong credentials', async ({ page }) => {
 
   await page.waitForLoadState('networkidle')
 
-  expect(toast).toBeVisible()
+  await expect(toast).toBeVisible()
 })
